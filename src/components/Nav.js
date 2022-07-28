@@ -5,7 +5,7 @@ function Nav() {
   return (
     <Navbar className='border'>
       <Container>
-        <Navbar.Brand href="#home">React Google Drive</Navbar.Brand>
+        <Navbar.Brand href="#home"><img className="drive-logo" src="./drive.png"/>Google Drive Clone</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
