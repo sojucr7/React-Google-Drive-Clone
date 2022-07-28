@@ -1,13 +1,12 @@
-## TODO
-- create a component  -done
-- add a button to add folders  -done
-- add a button to add files  -done
-- add folder -done
-- list folders -done 
-- Navigate into folder  -done
-- persist data in local storate -done
-- style using bootstrap  -done
-
-- list files 
-- show path
-- play/open files(optional)
+### TODO
+- [x] Create Drive Component
+- [x] Add a button to add folders
+- [x] Add a button to add files
+- [x] Add folder
+- [x] List folders
+- [x] Navigate into folder
+- [x] Persist data in local storage
+- [x] Style using bootstrap
+- [ ] List files
+- [ ] Show path 
+- [ ] Play/Open files

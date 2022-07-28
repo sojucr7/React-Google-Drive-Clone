@@ -5,7 +5,7 @@ import addFolderSliceReducer from './slice/addFolderSlice'
 let store=configureStore({
   reducer: {
     modal: modalSliceReducer,
-    addFolder:addFolderSliceReducer
+    folders:addFolderSliceReducer
   }
 })
 export default store;

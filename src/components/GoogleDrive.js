@@ -20,12 +20,12 @@ function GoogleDrive() {
     const dispatch = useDispatch()
     const location = useLocation();
     let { id } = useParams();
-    const folders = useSelector((state) => state.addFolder.folders);
+    const folders = getFolders(useSelector((state) => state.folders.folders),id);
 
     useEffect(() => {
         let folders=getStorageValue('folders')??[];
-        dispatch(setFolders(getFolders(folders,id)))
-    }, [location]);
+        dispatch(setFolders(folders))
+    }, []);
 
     return (
         <>

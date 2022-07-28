@@ -14,10 +14,9 @@ function AddFolder() {
     const inputRef = useRef(null);
     const dispatch = useDispatch()
     const show = useSelector(state => state.modal.showModal)
-    const folders = useSelector((state) => state.addFolder.folders);
+    const folders = useSelector((state) => state.folders.folders);
 
     function addFolder() {        
-        let folders=getStorageValue('folders')??[];
         let newFolder={id:uuidv4(),name:inputRef.current.value,parentId:id}
         setStorageValue('folders',[...folders,newFolder])
         dispatch(add(newFolder));

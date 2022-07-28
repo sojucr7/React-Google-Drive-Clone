@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 export const addFolderSlice = createSlice({
-  name: 'addFolder',
+  name: 'folders',
   initialState: {
     folders: []
   },
