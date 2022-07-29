@@ -20,3 +20,14 @@ a:hover{
     height: 50px;
     object-fit: contain;
 }
+video{
+    object-fit: fill;
+}
+.hstack{
+    flex-wrap: wrap;
+}
+.flex-row{
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+}

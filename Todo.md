@@ -7,6 +7,6 @@
 - [x] Navigate into folder
 - [x] Persist data in local storage
 - [x] Style using bootstrap
-- [ ] List files
-- [ ] Show path 
-- [ ] Play/Open files
+- [x] List files
+- [x] Play/Open files
+- [x] Show path 
