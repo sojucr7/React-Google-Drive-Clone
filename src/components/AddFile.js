@@ -27,7 +27,7 @@ function AddFile() {
     
     return (
         <>
-            <Modal dialogClassName="add-file" show={show && modalId=='add-file'} onHide={() => dispatch(close())}>
+            <Modal dialogClassName="add-file" show={show && modalId=='add-file'} onHide={() => dispatch(close())} data-testid="add-file-popup">
                 <Modal.Header closeButton>
                     <Modal.Title>Add File</Modal.Title>
                 </Modal.Header>

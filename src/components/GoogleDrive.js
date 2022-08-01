@@ -24,6 +24,7 @@ function GoogleDrive() {
     const dispatch = useDispatch()
     const location = useLocation();
     let { id } = useParams();
+    
     const folders = getFolders(useSelector((state) => state.folderSlice.folders), id);
     const files = getFiles(useSelector((state) => state.fileSlice.files), id);
 
@@ -45,15 +46,15 @@ function GoogleDrive() {
                     <div className="d-flex flex-row">
                         <Path />
                         <div className='d-flex flex-row'>
-                            <button type="button" className="btn btn-light" onClick={() => dispatch(open('add-file'))}>Add File</button>
-                            <div className="p-2"><Button variant="primary" onClick={() => dispatch(open('add-folder'))}>Add Folder </Button></div>
+                            <button type="button" className="btn btn-light" data-testid="add-file" onClick={() => dispatch(open('add-file'))}>Add File</button>
+                            <div className="p-2"><Button variant="primary" data-testid="add-folder" onClick={() => dispatch(open('add-folder'))}>Add Folder </Button></div>
                         </div>
                     </div>
                 </Row>
                 <Row className="pt-3">
                     <Stack direction="horizontal" gap={3}>
                         {folders.map(function (folder, i) {
-                            return (<Link to={`/folders/${folder.id}`} key={folder.id} ><div className="bg-light border p-3">{folder.name} <img src={ReactFolderIcon} alt="React Folder Icon" /> </div></Link>);
+                            return (<Link to={`/folders/${folder.id}`} key={folder.id}  data-testid="folder-link"><div className="bg-light border p-3" data-testid="folders">{folder.name} <img src={ReactFolderIcon} alt="React Folder Icon" /> </div></Link>);
                         })}
                     </Stack>
                 </Row>

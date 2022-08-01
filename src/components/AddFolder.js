@@ -35,7 +35,7 @@ function AddFolder() {
 
     return (
         <>
-            <Modal dialogClassName="add-folder" show={show && modalId == 'add-folder'} onHide={() => dispatch(close())}>
+            <Modal dialogClassName="add-folder" show={show && modalId == 'add-folder'} onHide={() => dispatch(close())} data-testid="add-folder-popup">
                 <Modal.Header closeButton>
                     <Modal.Title>Add Folder</Modal.Title>
                 </Modal.Header>
@@ -43,13 +43,14 @@ function AddFolder() {
                     <Form.Control
                         placeholder="Folder name"
                         ref={inputRef}
+                        data-testid="add-folder-input"
                     />
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={() => dispatch(close())}>
                         Close
                     </Button>
-                    <Button variant="primary" onClick={addFolder}>
+                    <Button variant="primary" onClick={addFolder} data-testid="add-folder-submit-btn">
                         Add Folder
                     </Button>
                 </Modal.Footer>
